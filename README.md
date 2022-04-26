@@ -1,4 +1,4 @@
-# educacao_portal
+# Projeto Educação
 
 A new Flutter project.
 
