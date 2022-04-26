@@ -11,7 +11,7 @@ class Unidade_Search extends StatefulWidget {
 }
 
 class _Unidades extends State<Unidade_Search> {
-  String unidade = '';
+  String unidade = 'ESCOLA MUNICIPAL TESTE EXPERIMENTAL';
 // SE A UNIDADE ESTIVER VAZIA ELA VIRA UM SEARCH
   @override
   Widget build(BuildContext context) {
@@ -41,10 +41,14 @@ class _Unidades extends State<Unidade_Search> {
               )));
     } else {
       return Container(
-          color: Colors.indigo,
+          height: 25,
+          color: const Color.fromRGBO(144, 182, 22, 0.8),
           alignment: Alignment.center,
-          child: Text(unidade,
-              style: const TextStyle(color: Colors.white, fontSize: 17)));
+          child: Text(
+            unidade,
+            style: const TextStyle(
+                fontWeight: FontWeight.bold, color: Colors.white),
+          ));
     }
   }
 }

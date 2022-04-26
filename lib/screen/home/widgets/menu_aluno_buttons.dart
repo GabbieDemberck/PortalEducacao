@@ -26,7 +26,7 @@ class Menu_Aluno_Buttons extends StatelessWidget {
           ElevatedButton(
             child: Container(
                 width: MediaQuery.of(context).size.width * 30 / 100,
-                height: 150,
+                height: 50,
                 alignment: Alignment.center,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -35,7 +35,8 @@ class Menu_Aluno_Buttons extends StatelessWidget {
                   children: [
                     Icon(
                       icon,
-                      size: 50,
+                      size: 10,
+                      color: const Color.fromRGBO(95, 137, 255, 0.7),
                     ),
                     Padding(
                       padding: EdgeInsets.all(8.0),

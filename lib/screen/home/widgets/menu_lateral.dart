@@ -7,9 +7,10 @@ class MenuLateral extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      elevation: 10,
       child: SafeArea(
         child: Container(
-          color: Colors.indigo,
+          color: Colors.white,
           child: Column(
             // ignore: prefer_const_literals_to_create_immutables
             children: [
