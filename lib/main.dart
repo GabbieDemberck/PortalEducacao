@@ -1,4 +1,4 @@
-import 'package:educacao_portal/screen/login/login.dart';
+import 'package:educacao_portal/screen/home/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: const Login(),
+      home: Home_Page(),
     );
   }
 }
