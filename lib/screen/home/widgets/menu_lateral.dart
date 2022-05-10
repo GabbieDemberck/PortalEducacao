@@ -7,52 +7,80 @@ class MenuLateral extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      elevation: 10,
+      elevation: 12,
       child: SafeArea(
         child: Container(
-          color: Colors.white,
+          padding: EdgeInsets.only(top: 10),
+          color: Colors.purple.shade900,
           child: Column(
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               // ignore: prefer_const_literals_to_create_immutables, prefer_const_constructors
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.account_tree),
-                  ),
-                  const Text('Meus Dados')
-                ],
+              MenuTextButton(
+                imagem: 'assets/icons_base/icons8-user-male-100-2.png',
+                label: 'Meu Perfil',
               ),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.account_tree),
-                  ),
-                  const Text('Minhas Disciplinas')
-                ],
+              MenuTextButton(
+                imagem: 'assets/icons_base/icons8-contacts-100-2.png',
+                label: 'Minhas Disciplinas',
               ),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.account_tree),
-                  ),
-                  const Text('Relatório Individual')
-                ],
+              MenuTextButton(
+                imagem: 'assets/icons_base/icons8-document-100-2.png',
+                label: 'Relatório Individual',
               ),
+
               Row(
                 children: [
                   IconButton(
                     onPressed: () {},
-                    icon: const Icon(Icons.account_tree),
+                    icon: const Icon(
+                      Icons.exit_to_app,
+                      color: Colors.white,
+                    ),
                   ),
-                  const Text('Sair')
+                  const Text('Sair',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white))
                 ],
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class MenuTextButton extends StatelessWidget {
+  late String imagem;
+  late String label;
+
+  MenuTextButton({Key? key, required this.imagem, required this.label})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () {},
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width * 70 / 100,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Image.asset(
+                imagem,
+                width: 25,
+                height: 25,
+              ),
+            ),
+            Text(
+              label,
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+            )
+          ],
         ),
       ),
     );

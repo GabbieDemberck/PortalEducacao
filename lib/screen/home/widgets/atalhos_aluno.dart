@@ -11,7 +11,7 @@ class Atalhos_Aluno extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
-          padding: const EdgeInsets.only(left: 8.0, top: 10),
+          padding: const EdgeInsets.only(left: 8.0, top: 25),
           child: Text(
             ' Atalhos',
             style: TextStyle(
@@ -27,8 +27,21 @@ class Atalhos_Aluno extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              for (int i = 0; i < 6; i++)
-                Padding(padding: const EdgeInsets.all(8.0), child: Atalho()),
+              Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Atalho(icon: Icons.access_alarm_sharp)),
+              Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Atalho(icon: Icons.chat)),
+              Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Atalho(icon: Icons.backpack)),
+              Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Atalho(icon: Icons.receipt)),
+              Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Atalho(icon: Icons.notifications)),
             ],
           ),
         ),
