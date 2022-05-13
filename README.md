@@ -1,16 +1,26 @@
-# Projeto Educação
+<a href="https://code.visualstudio.com"><img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" /></a><a href="https://flutter.dev/?gclid=Cj0KCQjwg_iTBhDrARIsAD3Ib5jnKCKGCVyqtz1967UF35lhmhQTSwFtQ2xr9ad91zUA6VJuGZePzrMaAi7iEALw_wcB&gclsrc=aw.ds"><img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" /></a><a href="https://dart.dev/get-dart"><img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" /></a>
 
-A new Flutter project.
+<h1 align="Left"> Projeto - Portal Educação </h1>
 
-## Getting Started
+## 📚 Sobre
+ <p> Este projeto é um app mobile utilizando dart/Flutter de um portal do aluno e professor.</p>
 
-This project is a starting point for a Flutter application.
+### 📋 Ajustes e melhorias
+<p> O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:</p>
 
-A few resources to get you started if this is your first Flutter project:
+- [ ] Splash
+- [x] Tela inicial
+- [x] Login
+- [ ] Tela de Perfil do usuário
+- [ ] Tela de lista de unidade escolar
+- [ ] Tela de Calendário escolar
+- [ ] Tela de Atividades Avaliativas
+- [ ] Tela de geração de Relatórios e Documentações
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+⭐ Extra 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [ ] Responsividade
+- [ ] Design (Formas,Fontes e Cores) 
+- [ ] Refatorar 
+- [ ] Integração com API
+- [ ] Testes Automatizados
