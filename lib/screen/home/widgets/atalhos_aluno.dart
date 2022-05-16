@@ -1,3 +1,6 @@
+import 'dart:developer';
+import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -7,23 +10,15 @@ import 'atalho.dart';
 class Atalhos_Aluno extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double? sizeWidth = MediaQuery.of(context).size.width * 90 / 100;
+    double? sizeHeight = MediaQuery.of(context).size.height * 10 / 100;
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Padding(
-          padding: const EdgeInsets.only(left: 8.0, top: 25),
-          child: Text(
-            ' Atalhos',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-            textAlign: TextAlign.left,
-          ),
-        ),
         Container(
-          height: 60,
-          width: MediaQuery.of(context).size.width * 90 / 100,
+          height: sizeHeight,
+          width: sizeWidth,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [

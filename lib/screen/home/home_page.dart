@@ -1,10 +1,10 @@
+import 'package:educacao_portal/screen/home/widgets/bottom_navigation.dart';
 import 'package:educacao_portal/screen/home/widgets/horario_aula.dart';
 import 'package:educacao_portal/screen/home/widgets/menu_lateral.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import 'widgets/atalhos_aluno.dart';
 import 'widgets/cabecalho_aluno.dart';
 import 'widgets/menu_atividades.dart';
 
@@ -13,25 +13,65 @@ class Home_Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.purple.shade900,
-          elevation: 0,
+      appBar: AppBar(
+        backgroundColor: Colors.purple.shade900,
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(
+                Icons.notifications,
+                size: 18,
+              ),
+              onPressed: () {},
+            );
+          },
         ),
-        drawer: const MenuLateral(),
-        body: Column(
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.settings,
+              size: 18,
+            ),
+            onPressed: () {},
+          ),
+          IconButton(
+            tooltip: 'Exit',
+            icon: Icon(
+              Icons.exit_to_app,
+              size: 18,
+            ),
+            onPressed: () {},
+          ),
+        ],
+        elevation: 0,
+      ),
+      //drawer: const MenuLateral(),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
+                alignment: Alignment.center,
                 decoration: BoxDecoration(
                     color: Colors.purple.shade900,
                     borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(40),
                       bottomRight: Radius.circular(40),
                     )),
-                height: MediaQuery.of(context).size.height * 23 / 100,
+                height: MediaQuery.of(context).size.height * 25 / 100,
                 child: Cabecalho_Aluno()),
             Horario_Aula(),
             Menu_Atividades(),
           ],
-        ));
+        ),
+      ),
+      floatingActionButton: FloatingActionButton.small(
+        onPressed: () {},
+        child: Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: Bottom_Navigation(),
+    );
   }
 }

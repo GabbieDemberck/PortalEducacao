@@ -6,20 +6,18 @@ class Atalho extends StatelessWidget {
   Atalho({Key? key, required this.icon}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    double? size = MediaQuery.of(context).size.width * 15 / 100;
     return Container(
         alignment: Alignment.center,
-        width: 50,
+        width: size,
+        height: size,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50),
+            borderRadius: BorderRadius.circular(100),
             color: Colors.black.withOpacity(0.2)),
-        child: Container(
-          height: 30,
-          width: 30,
-          child: Icon(
-            icon,
-            size: 20,
-            color: Colors.white,
-          ),
+        child: Icon(
+          icon,
+          size: MediaQuery.of(context).size.width * 6 / 100,
+          color: Colors.white,
         ));
   }
 }
