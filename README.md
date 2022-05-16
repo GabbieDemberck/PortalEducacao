@@ -24,6 +24,6 @@
 - [ ] Integração com API
 - [ ] Testes Automatizados
 
-### 🔧 Ferramentas Utilizadas 
+### 💻 Ferramentas Utilizadas 
 
 <a href="https://code.visualstudio.com"><img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" /></a><a href="https://flutter.dev/?gclid=Cj0KCQjwg_iTBhDrARIsAD3Ib5jnKCKGCVyqtz1967UF35lhmhQTSwFtQ2xr9ad91zUA6VJuGZePzrMaAi7iEALw_wcB&gclsrc=aw.ds"><img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" /></a><a href="https://dart.dev/get-dart"><img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" /></a>
