@@ -3,12 +3,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Menu_Row_Widget extends StatelessWidget {
-  String titulo;
-  IconData inone;
-  Widget link;
+class MenuRowWidget extends StatelessWidget {
+  final String titulo;
+  final IconData inone;
+  final Widget link;
 
-  Menu_Row_Widget(this.titulo, this.inone, this.link);
+  const MenuRowWidget(this.titulo, this.inone, this.link);
 
   @override
   Widget build(BuildContext context) {

@@ -3,37 +3,39 @@ import 'package:flutter/material.dart';
 
 import 'unidades.dart';
 
-class Unidade_Lista extends StatefulWidget {
+class UnidadeLista extends StatefulWidget {
+  const UnidadeLista({Key? key}) : super(key: key);
+
   @override
-  _Unidade_Lista_State createState() => _Unidade_Lista_State();
+  _UnidadeListaState createState() => _UnidadeListaState();
 }
 
-class _Unidade_Lista_State extends State<Unidade_Lista> {
+class _UnidadeListaState extends State<UnidadeLista> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Lista De Unidades')),
+      appBar: AppBar(title: const Text('Lista De Unidades')),
       body: Column(
         children: [
-          TextField(),
-          Container(
+          const TextField(),
+          SizedBox(
             height: MediaQuery.of(context).size.height * 80 / 100,
             child: ListView(
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-                Unidades_List(
-                    unidade_nome: 'ESCOLA MUNICIPAL SEMENTE DO SABER'),
-                Unidades_List(
-                    unidade_nome: 'ESCOLA MUNICIPAL NILO PROCÓPIO PEÇANHA'),
-                Unidades_List(
-                    unidade_nome:
+                const UnidadesList(
+                    unidadeNome: 'ESCOLA MUNICIPAL SEMENTE DO SABER'),
+                const UnidadesList(
+                    unidadeNome: 'ESCOLA MUNICIPAL NILO PROCÓPIO PEÇANHA'),
+                const UnidadesList(
+                    unidadeNome:
                         'ESCOLA MUNICIPAL PROFESSORA SÔNIA MARIA FALEIRO'),
-                Unidades_List(
-                    unidade_nome:
-                        'ESCOLA MUNICIPAL VICENTE FRANCISCO DA SILVA'),
-                Unidades_List(
-                    unidade_nome: 'ESCOLA MUNICIPAL JARDIM DAS FLORES'),
-                Unidades_List(unidade_nome: 'ESCOLA MUNICIPAL MENINO JESUS'),
+                const UnidadesList(
+                    unidadeNome: 'ESCOLA MUNICIPAL VICENTE FRANCISCO DA SILVA'),
+                const UnidadesList(
+                    unidadeNome: 'ESCOLA MUNICIPAL JARDIM DAS FLORES'),
+                const UnidadesList(
+                    unidadeNome: 'ESCOLA MUNICIPAL MENINO JESUS'),
               ],
             ),
           )

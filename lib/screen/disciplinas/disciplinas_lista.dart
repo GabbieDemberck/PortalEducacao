@@ -3,9 +3,9 @@ import 'package:educacao_portal/screen/home/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'model/disciplina.dart';
+class DisciplinasLista extends StatelessWidget {
+  const DisciplinasLista({Key? key}) : super(key: key);
 
-class Disciplinas_Lista extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,8 +20,8 @@ class Disciplinas_Lista extends StatelessWidget {
         ),
         leading: BackButton(
           color: Colors.grey,
-          onPressed: () => Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Home_Page())),
+          onPressed: () => Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const HomePage())),
         ),
       ),
       body: SingleChildScrollView(
@@ -30,53 +30,53 @@ class Disciplinas_Lista extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           child: ListView(
             children: [
-              Disciplinas_Card(
-                materia_nome: 'Química',
-                materia_cor: Colors.deepPurple.shade400,
-                atividades_feitas: 1,
-                atividades_lancadas: 10,
+              DisciplinasCard(
+                materiaNome: 'Química',
+                materiaCor: Colors.deepPurple.shade400,
+                atividadesFeitas: 1,
+                atividadesLancadas: 10,
               ),
-              Disciplinas_Card(
-                materia_nome: 'Matematica',
-                materia_cor: Colors.deepPurple.shade400,
-                atividades_feitas: 0,
-                atividades_lancadas: 15,
+              DisciplinasCard(
+                materiaNome: 'Matematica',
+                materiaCor: Colors.deepPurple.shade400,
+                atividadesFeitas: 0,
+                atividadesLancadas: 15,
               ),
-              Disciplinas_Card(
-                materia_nome: 'Língua Portuguesa',
-                materia_cor: Colors.deepPurple.shade400,
-                atividades_feitas: 10,
-                atividades_lancadas: 30,
+              DisciplinasCard(
+                materiaNome: 'Língua Portuguesa',
+                materiaCor: Colors.deepPurple.shade400,
+                atividadesFeitas: 10,
+                atividadesLancadas: 30,
               ),
-              Disciplinas_Card(
-                materia_nome: 'Física',
-                materia_cor: Colors.deepPurple.shade400,
-                atividades_feitas: 10,
-                atividades_lancadas: 10,
+              DisciplinasCard(
+                materiaNome: 'Física',
+                materiaCor: Colors.deepPurple.shade400,
+                atividadesFeitas: 10,
+                atividadesLancadas: 10,
               ),
-              Disciplinas_Card(
-                materia_nome: 'Filosofia',
-                materia_cor: Colors.deepPurple.shade400,
-                atividades_feitas: 0,
-                atividades_lancadas: 31,
+              DisciplinasCard(
+                materiaNome: 'Filosofia',
+                materiaCor: Colors.deepPurple.shade400,
+                atividadesFeitas: 0,
+                atividadesLancadas: 31,
               ),
-              Disciplinas_Card(
-                materia_nome: 'Sociologia',
-                materia_cor: Colors.deepPurple.shade400,
-                atividades_feitas: 1,
-                atividades_lancadas: 1,
+              DisciplinasCard(
+                materiaNome: 'Sociologia',
+                materiaCor: Colors.deepPurple.shade400,
+                atividadesFeitas: 1,
+                atividadesLancadas: 1,
               ),
-              Disciplinas_Card(
-                materia_nome: 'Ingles',
-                materia_cor: Colors.deepPurple.shade400,
-                atividades_feitas: 0,
-                atividades_lancadas: 4,
+              DisciplinasCard(
+                materiaNome: 'Ingles',
+                materiaCor: Colors.deepPurple.shade400,
+                atividadesFeitas: 0,
+                atividadesLancadas: 4,
               ),
-              Disciplinas_Card(
-                materia_nome: 'Espanhol',
-                materia_cor: Colors.deepPurple.shade400,
-                atividades_feitas: 0,
-                atividades_lancadas: 5,
+              DisciplinasCard(
+                materiaNome: 'Espanhol',
+                materiaCor: Colors.deepPurple.shade400,
+                atividadesFeitas: 0,
+                atividadesLancadas: 5,
               ),
             ],
           ),

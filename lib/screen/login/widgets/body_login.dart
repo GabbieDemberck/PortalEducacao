@@ -46,14 +46,12 @@ class _BodyLoginState extends State<BodyLogin> {
             ),
           ),
         ),
-        Container(
-          child: TextButton(
-            child: const Text('Esqueci minha senha'),
-            onPressed: () => {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Home_Page()))
-            },
-          ),
+        TextButton(
+          child: const Text('Esqueci minha senha'),
+          onPressed: () => {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const HomePage()))
+          },
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -62,10 +60,10 @@ class _BodyLoginState extends State<BodyLogin> {
               primary: Colors.indigo,
             ),
             onPressed: () => {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Home_Page()))
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const HomePage()))
             },
-            child: Container(
+            child: SizedBox(
                 width: MediaQuery.of(context).size.width * 25 / 100,
                 height: 40,
                 child: const Center(

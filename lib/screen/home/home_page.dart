@@ -8,7 +8,9 @@ import 'widgets/cabecalho_aluno.dart';
 import 'widgets/menu_atividades.dart';
 
 // ignore: must_be_immutable, camel_case_types
-class Home_Page extends StatelessWidget {
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,9 +61,9 @@ class Home_Page extends StatelessWidget {
                       bottomRight: Radius.circular(40),
                     )),
                 height: MediaQuery.of(context).size.height * 25 / 100,
-                child: Cabecalho_Aluno()),
-            Horario_Aula(),
-            Menu_Atividades(),
+                child: const CabecalhoAluno()),
+            const HorarioAula(),
+            const MenuAtividades(),
           ],
         ),
       ),
@@ -70,7 +72,7 @@ class Home_Page extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: Bottom_Navigation(),
+      bottomNavigationBar: const BottomNavigation(),
     );
   }
 }

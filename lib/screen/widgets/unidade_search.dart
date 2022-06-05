@@ -26,7 +26,7 @@ class _Unidades extends State<Unidade_Search> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Unidade_Lista()))
+                            builder: (context) => const UnidadeLista()))
                   },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

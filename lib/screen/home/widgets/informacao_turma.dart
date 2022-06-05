@@ -26,7 +26,7 @@ class _Turma extends State<Informacao_Turma> {
       child: DropdownButtonHideUnderline(
         child: DropdownButton(
             hint: const Text(
-              ' Turma:1º Ano ' + '- ' + 'PERÍODO:MATUTINO',
+              ' Turma:1º Ano ' '- ' 'PERÍODO:MATUTINO',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             isExpanded: true,

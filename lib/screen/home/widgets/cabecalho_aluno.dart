@@ -1,18 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../usuario_icones_lista.dart';
 import 'atalhos_aluno.dart';
 import 'foto_usuario.dart';
 
-class Cabecalho_Aluno extends StatelessWidget {
-  String aluno = 'Gabrielle Cristina Soares Demberck';
-  Cabecalho_Aluno({Key? key}) : super(key: key);
+class CabecalhoAluno extends StatelessWidget {
+  final String aluno = 'Gabrielle Cristina Soares Demberck';
+  const CabecalhoAluno({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     double? sizeWidth = MediaQuery.of(context).size.width;
-    print(sizeWidth);
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -60,7 +58,7 @@ class Cabecalho_Aluno extends StatelessWidget {
                 textAlign: TextAlign.left,
               ),
             ),
-          Atalhos_Aluno()
+          const AtalhosAluno()
         ],
       ),
     );

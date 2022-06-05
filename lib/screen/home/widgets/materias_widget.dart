@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:time_planner/time_planner.dart';
 
-class Materias_widget {
+class MateriasWidget {
   String materia = 'MAT';
   Color? colors = Colors.blue;
   int hour = 13;

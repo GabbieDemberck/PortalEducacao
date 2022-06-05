@@ -1,18 +1,18 @@
+import 'package:educacao_portal/screen/home/widgets/informacao_turma.dart';
+import 'package:educacao_portal/screen/home/widgets/materias_widget.dart';
 import 'package:educacao_portal/screen/widgets/unidade_search.dart';
 import 'package:flutter/material.dart';
 import 'package:time_planner/time_planner.dart';
 
-import 'home/widgets/informacao_turma.dart';
-import 'home/widgets/materias_widget.dart';
-import 'home/widgets/menu_lateral.dart';
+class AlunoQuadroDeAulas extends StatefulWidget {
+  const AlunoQuadroDeAulas({Key? key}) : super(key: key);
 
-class Aluno_Quadro_De_Aulas extends StatefulWidget {
   @override
-  _Aluno_Quadro_De_AulasState createState() => _Aluno_Quadro_De_AulasState();
+  _AlunoQuadroDeAulasState createState() => _AlunoQuadroDeAulasState();
 }
 
-class _Aluno_Quadro_De_AulasState extends State<Aluno_Quadro_De_Aulas> {
-  Materias_widget materia = Materias_widget();
+class _AlunoQuadroDeAulasState extends State<AlunoQuadroDeAulas> {
+  MateriasWidget materia = MateriasWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +35,7 @@ class _Aluno_Quadro_De_AulasState extends State<Aluno_Quadro_De_Aulas> {
         daysDuration: 1,
         child: const Text(
           'CIÊNCIAS',
-          style:
-              const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
       TimePlannerTask(
@@ -46,8 +45,7 @@ class _Aluno_Quadro_De_AulasState extends State<Aluno_Quadro_De_Aulas> {
         daysDuration: 1,
         child: const Text(
           'HISTÓRIA',
-          style:
-              const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       )
     ];
@@ -62,7 +60,7 @@ class _Aluno_Quadro_De_AulasState extends State<Aluno_Quadro_De_Aulas> {
       drawerScrimColor: Colors.white60,
       body: Column(
         children: [
-          Unidade_Search(),
+          const Unidade_Search(),
           SizedBox(
               width: MediaQuery.of(context).size.width * 80 / 100,
               child: Informacao_Turma()),

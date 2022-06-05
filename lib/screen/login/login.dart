@@ -1,4 +1,3 @@
-import 'package:educacao_portal/screen/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/body_login.dart';

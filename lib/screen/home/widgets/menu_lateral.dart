@@ -10,25 +10,24 @@ class MenuLateral extends StatelessWidget {
       elevation: 12,
       child: SafeArea(
         child: Container(
-          padding: EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10),
           color: Colors.purple.shade900,
           child: Column(
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               // ignore: prefer_const_literals_to_create_immutables, prefer_const_constructors
-              MenuTextButton(
+              const MenuTextButton(
                 imagem: 'assets/icons_base/icons8-user-male-100-2.png',
                 label: 'Meu Perfil',
               ),
-              MenuTextButton(
+              const MenuTextButton(
                 imagem: 'assets/icons_base/icons8-contacts-100-2.png',
                 label: 'Minhas Disciplinas',
               ),
-              MenuTextButton(
+              const MenuTextButton(
                 imagem: 'assets/icons_base/icons8-document-100-2.png',
                 label: 'Relatório Individual',
               ),
-
               Row(
                 children: [
                   IconButton(
@@ -52,10 +51,10 @@ class MenuLateral extends StatelessWidget {
 }
 
 class MenuTextButton extends StatelessWidget {
-  late String imagem;
-  late String label;
+  final String imagem;
+  final String label;
 
-  MenuTextButton({Key? key, required this.imagem, required this.label})
+  const MenuTextButton({Key? key, required this.imagem, required this.label})
       : super(key: key);
 
   @override
@@ -77,8 +76,8 @@ class MenuTextButton extends StatelessWidget {
             ),
             Text(
               label,
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              style: const TextStyle(
+                  fontWeight: FontWeight.bold, color: Colors.white),
             )
           ],
         ),

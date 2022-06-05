@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Atalho extends StatelessWidget {
-  late IconData icon;
-  Atalho({Key? key, required this.icon}) : super(key: key);
+  final IconData icon;
+  const Atalho({Key? key, required this.icon}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     double? size = MediaQuery.of(context).size.width * 15 / 100;

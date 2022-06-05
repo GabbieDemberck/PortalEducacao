@@ -8,7 +8,7 @@ class FotoUsuario extends StatefulWidget {
 }
 
 class _FotoUsuarioState extends State<FotoUsuario> {
-  List usuario_icones = [
+  List usuarioIcones = [
     'icons8-x-men-100.png',
     'icons8-anonymous-mask-100.png',
     'icons8-arryn-house-100.png',
@@ -78,15 +78,15 @@ class _FotoUsuarioState extends State<FotoUsuario> {
     'icons8-woody-woodpecker-100.png',
   ];
 
-  bool possui_foto = false;
+  bool possuiFoto = false;
 
   @override
   Widget build(BuildContext context) {
-    double? foto_size = MediaQuery.of(context).size.width * 18 / 100;
+    final double? fotoSize = MediaQuery.of(context).size.width * 18 / 100;
     return Container(
       alignment: Alignment.center,
-      width: foto_size,
-      height: foto_size,
+      width: fotoSize,
+      height: fotoSize,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
         color: Colors.white,
@@ -101,7 +101,7 @@ class _FotoUsuarioState extends State<FotoUsuario> {
             context: context,
             builder: (BuildContext context) => AlertDialog(
               title: const Text('Selecione'),
-              content: Container(
+              content: SizedBox(
                 width: MediaQuery.of(context).size.width * 90 / 100,
                 height: MediaQuery.of(context).size.height * 50 / 100,
                 child: GridView.builder(
@@ -116,12 +116,12 @@ class _FotoUsuarioState extends State<FotoUsuario> {
                   itemBuilder: (BuildContext ctx, int index) {
                     return ListTile(
                         title: Image.asset(
-                      'assets/iconsUser/' + usuario_icones[index],
+                      'assets/iconsUser/' + usuarioIcones[index],
                       width: 150,
                       height: 150,
                     ));
                   },
-                  itemCount: usuario_icones.length,
+                  itemCount: usuarioIcones.length,
                 ),
               ),
               actions: <Widget>[

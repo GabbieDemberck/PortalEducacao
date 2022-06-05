@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Unidades_List extends StatelessWidget {
-  final String unidade_nome;
+class UnidadesList extends StatelessWidget {
+  final String unidadeNome;
 
-  const Unidades_List({Key? key, required this.unidade_nome}) : super(key: key);
+  const UnidadesList({Key? key, required this.unidadeNome}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(unidade_nome),
+      title: Text(unidadeNome),
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[

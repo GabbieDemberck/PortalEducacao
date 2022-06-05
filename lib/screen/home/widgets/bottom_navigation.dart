@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 
 import 'perfil_usuario.dart';
 
-class Bottom_Navigation extends StatefulWidget {
+class BottomNavigation extends StatefulWidget {
+  const BottomNavigation({Key? key}) : super(key: key);
+
   @override
-  State<StatefulWidget> createState() => _Bottom_Navigation_State();
+  State<StatefulWidget> createState() => _BottomNavigationState();
 }
 
-class _Bottom_Navigation_State extends State<Bottom_Navigation> {
+class _BottomNavigationState extends State<BottomNavigation> {
   Color? colorIcon = Colors.white;
 
   @override
@@ -21,8 +23,10 @@ class _Bottom_Navigation_State extends State<Bottom_Navigation> {
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           IconButton(
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Perfil_Usuario()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const PerfilUsuario()));
             },
             icon: Icon(
               Icons.person_rounded,
@@ -31,8 +35,10 @@ class _Bottom_Navigation_State extends State<Bottom_Navigation> {
           ),
           IconButton(
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Disciplinas_Lista()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DisciplinasLista()));
             },
             icon: Icon(
               Icons.book_rounded,

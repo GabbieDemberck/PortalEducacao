@@ -1,19 +1,18 @@
+import 'package:educacao_portal/screen/widgets/aluno_quadro_de_aulas.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../aluno_quadro_de_aulas.dart';
-
-class Menu_Aluno_Buttons extends StatelessWidget {
-  final String text_button;
+class MenuAlunoButtons extends StatelessWidget {
+  final String textButton;
   final IconData icon;
-  final String text_button2;
+  final String textButton2;
   final IconData icon2;
 
-  Menu_Aluno_Buttons(
+  const MenuAlunoButtons(
       {Key? key,
-      required this.text_button,
+      required this.textButton,
       required this.icon,
-      required this.text_button2,
+      required this.textButton2,
       required this.icon2})
       : super(key: key);
   @override
@@ -39,8 +38,8 @@ class Menu_Aluno_Buttons extends StatelessWidget {
                       color: const Color.fromRGBO(95, 137, 255, 0.7),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text(text_button),
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(textButton),
                     ),
                   ],
                 )),
@@ -48,7 +47,7 @@ class Menu_Aluno_Buttons extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => Aluno_Quadro_De_Aulas()))
+                      builder: (context) => const AlunoQuadroDeAulas()))
             },
           ),
           ElevatedButton(
@@ -66,8 +65,8 @@ class Menu_Aluno_Buttons extends StatelessWidget {
                       size: 50,
                     ),
                     Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text(text_button2),
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(textButton2),
                     ),
                   ],
                 )),
@@ -75,7 +74,7 @@ class Menu_Aluno_Buttons extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => Aluno_Quadro_De_Aulas()))
+                      builder: (context) => const AlunoQuadroDeAulas()))
             },
           ),
         ],

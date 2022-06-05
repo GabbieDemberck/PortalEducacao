@@ -1,9 +1,11 @@
-import 'package:educacao_portal/screen/aluno_quadro_de_aulas.dart';
+import 'package:educacao_portal/screen/widgets/aluno_quadro_de_aulas.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class Horario_Aula extends StatelessWidget {
+class HorarioAula extends StatelessWidget {
+  const HorarioAula({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -29,7 +31,7 @@ class Horario_Aula extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Aluno_Quadro_De_Aulas()))
+                              builder: (context) => const AlunoQuadroDeAulas()))
                     },
                 child: Text(
                   'Ver mais',
@@ -44,7 +46,7 @@ class Horario_Aula extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width * 40 / 100,
                 child: Card(
                   color: Colors.white,
@@ -58,14 +60,14 @@ class Horario_Aula extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             'Matemática',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),
-                          const Text(
+                          Text(
                             '13:00 - 14:00',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -78,7 +80,7 @@ class Horario_Aula extends StatelessWidget {
                 ),
               ),
               for (int i = 1; i < 6; i++)
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width * 40 / 100,
                   child: Card(
                     child: InkWell(
@@ -91,7 +93,7 @@ class Horario_Aula extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
+                          children: const [
                             Text(
                               'Matemática',
                               style: TextStyle(fontWeight: FontWeight.bold),

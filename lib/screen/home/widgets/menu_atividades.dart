@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Menu_Atividades extends StatelessWidget {
+class MenuAtividades extends StatelessWidget {
+  const MenuAtividades({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -36,7 +38,7 @@ class Menu_Atividades extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 40 / 100,
               child: ListView(
                 children: [
-                  Container(
+                  SizedBox(
                     width: MediaQuery.of(context).size.width * 90 / 100,
                     height: MediaQuery.of(context).size.height * 25 / 100,
                     child: Card(
@@ -61,7 +63,7 @@ class Menu_Atividades extends StatelessWidget {
                     ),
                   ),
                   for (int i = 1; i < 6; i++)
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width * 90 / 100,
                       height: MediaQuery.of(context).size.height * 20 / 100,
                       child: Card(
@@ -75,7 +77,7 @@ class Menu_Atividades extends StatelessWidget {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [],
+                              children: [Container()],
                             ),
                           ),
                         ),

@@ -1,17 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Disciplinas_Card extends StatelessWidget {
-  late String? materia_nome;
-  late Color materia_cor;
-  late int atividades_lancadas;
-  late int atividades_feitas;
+class DisciplinasCard extends StatelessWidget {
+  final String? materiaNome;
+  final Color materiaCor;
+  final int atividadesLancadas;
+  final int atividadesFeitas;
 
-  Disciplinas_Card(
-      {required this.materia_nome,
-      required this.materia_cor,
-      required this.atividades_feitas,
-      required this.atividades_lancadas});
+  const DisciplinasCard(
+      {Key? key,
+      required this.materiaNome,
+      required this.materiaCor,
+      required this.atividadesFeitas,
+      required this.atividadesLancadas})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +27,14 @@ class Disciplinas_Card extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(3.0),
-              child: _Icon_Aviso(
-                  atividades_lancadas: atividades_lancadas,
-                  atividades_feitas: atividades_feitas),
+              child: _IconAviso(
+                  atividadesLancadas: atividadesLancadas,
+                  atividadesFeitas: atividadesFeitas),
             ),
             Container(
               width: MediaQuery.of(context).size.width * 70 / 100,
               height: MediaQuery.of(context).size.height,
-              color: materia_cor,
+              color: materiaCor,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -45,11 +47,11 @@ class Disciplinas_Card extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Expanded(
                           child: Text(
-                            materia_nome!,
+                            materiaNome!,
                             maxLines: 1,
                             softWrap: false,
                             textAlign: TextAlign.center,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 20,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -61,13 +63,13 @@ class Disciplinas_Card extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    '$atividades_feitas/$atividades_lancadas',
-                    style: TextStyle(
+                    '$atividadesFeitas/$atividadesLancadas',
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
                   ),
-                  Text(
+                  const Text(
                     'Atividades Realizadas',
                     style: TextStyle(fontSize: 12, color: Colors.white),
                   ),
@@ -76,7 +78,7 @@ class Disciplinas_Card extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {},
-              child: Text(
+              child: const Text(
                 'Ver mais',
                 softWrap: true,
                 style: TextStyle(color: Colors.grey, fontSize: 12),
@@ -90,20 +92,20 @@ class Disciplinas_Card extends StatelessWidget {
 }
 
 // ignore: camel_case_types
-class _Icon_Aviso extends StatelessWidget {
-  int? atividades_feitas;
-  int? atividades_lancadas;
-  _Icon_Aviso({this.atividades_feitas, this.atividades_lancadas});
+class _IconAviso extends StatelessWidget {
+  final int? atividadesFeitas;
+  final int? atividadesLancadas;
+  const _IconAviso({this.atividadesFeitas, this.atividadesLancadas});
 
   @override
   Widget build(BuildContext context) {
-    if (atividades_feitas == atividades_lancadas) {
-      return Icon(
+    if (atividadesFeitas == atividadesLancadas) {
+      return const Icon(
         Icons.check_circle_outline_sharp,
         color: Colors.green,
       );
     } else {
-      return Icon(
+      return const Icon(
         Icons.radio_button_unchecked_sharp,
         color: Colors.grey,
       );
