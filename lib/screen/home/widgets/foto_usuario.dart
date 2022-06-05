@@ -107,7 +107,7 @@ class _FotoUsuarioState extends State<FotoUsuario> {
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     // number of items per row
-                    crossAxisCount: 4,
+                    crossAxisCount: 3,
                     // vertical spacing between the items
                     mainAxisSpacing: 2,
                     // horizontal spacing between the items
@@ -117,8 +117,8 @@ class _FotoUsuarioState extends State<FotoUsuario> {
                     return ListTile(
                         title: Image.asset(
                       'assets/iconsUser/' + usuario_icones[index],
-                      width: 50,
-                      height: 50,
+                      width: 150,
+                      height: 150,
                     ));
                   },
                   itemCount: usuario_icones.length,

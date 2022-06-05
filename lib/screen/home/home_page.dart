@@ -1,6 +1,5 @@
 import 'package:educacao_portal/screen/home/widgets/bottom_navigation.dart';
 import 'package:educacao_portal/screen/home/widgets/horario_aula.dart';
-import 'package:educacao_portal/screen/home/widgets/menu_lateral.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -28,7 +27,7 @@ class Home_Page extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.settings,
               size: 18,
             ),
@@ -36,7 +35,7 @@ class Home_Page extends StatelessWidget {
           ),
           IconButton(
             tooltip: 'Exit',
-            icon: Icon(
+            icon: const Icon(
               Icons.exit_to_app,
               size: 18,
             ),
@@ -68,7 +67,7 @@ class Home_Page extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton.small(
         onPressed: () {},
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: Bottom_Navigation(),

@@ -1,7 +1,6 @@
-import 'package:educacao_portal/screen/home/home_page.dart';
-import 'package:educacao_portal/screen/login/login.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'screen/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,9 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
+      theme: ThemeData(),
       home: Home_Page(),
     );
   }

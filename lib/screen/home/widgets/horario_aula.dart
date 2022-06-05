@@ -47,7 +47,7 @@ class Horario_Aula extends StatelessWidget {
               Container(
                 width: MediaQuery.of(context).size.width * 40 / 100,
                 child: Card(
-                  color: Colors.red,
+                  color: Colors.white,
                   child: InkWell(
                     splashColor: Colors.blue.withAlpha(30),
                     onTap: () {
@@ -59,13 +59,13 @@ class Horario_Aula extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text(
+                          const Text(
                             'Matemática',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),
-                          Text(
+                          const Text(
                             '13:00 - 14:00',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,

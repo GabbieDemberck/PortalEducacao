@@ -2,6 +2,8 @@ import 'package:educacao_portal/screen/disciplinas/disciplinas_lista.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'perfil_usuario.dart';
+
 class Bottom_Navigation extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _Bottom_Navigation_State();
@@ -18,7 +20,10 @@ class _Bottom_Navigation_State extends State<Bottom_Navigation> {
         // ignore: prefer_const_literals_to_create_immutables
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Perfil_Usuario()));
+            },
             icon: Icon(
               Icons.person_rounded,
               color: colorIcon,
