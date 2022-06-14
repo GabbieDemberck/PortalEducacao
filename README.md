@@ -12,7 +12,7 @@
 - [ ] Tela de Perfil do usuário
 - [ ] Tela de lista de unidade escolar
 - [ ] Tela de Calendário escolar
-- [ ] Tela de Atividades Avaliativas
+- [x] Tela de Atividades Avaliativas
 - [ ] Tela de geração de Relatórios e Documentações
 - [ ] Tela de Quadro de aulas
 
