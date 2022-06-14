@@ -1,6 +1,5 @@
+import 'package:educacao_portal/screen/login/login.dart';
 import 'package:flutter/material.dart';
-
-import 'screen/home/widgets/perfil_usuario.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: const PerfilUsuario(),
+      home: const Login(),
     );
   }
 }

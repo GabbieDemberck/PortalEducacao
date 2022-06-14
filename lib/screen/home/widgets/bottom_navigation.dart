@@ -2,6 +2,7 @@ import 'package:educacao_portal/screen/disciplinas/disciplinas_lista.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../widgets/unidade_lista.dart';
 import 'perfil_usuario.dart';
 
 class BottomNavigation extends StatefulWidget {
@@ -41,7 +42,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                       builder: (context) => const DisciplinasLista()));
             },
             icon: Icon(
-              Icons.book_rounded,
+              Icons.ballot,
               color: colorIcon,
             ),
           ),
@@ -49,16 +50,21 @@ class _BottomNavigationState extends State<BottomNavigation> {
             width: 24,
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const UnidadeLista()));
+            },
             icon: Icon(
-              Icons.person,
+              Icons.account_balance_outlined,
               color: colorIcon,
             ),
           ),
           IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.person,
+              Icons.align_vertical_bottom,
               color: colorIcon,
             ),
           )

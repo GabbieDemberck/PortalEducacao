@@ -17,7 +17,7 @@ class Login extends StatelessWidget {
                   color: Colors.white,
                 ),
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 50 / 100,
+                height: MediaQuery.of(context).size.height * 40 / 100,
                 child: Container(
                   decoration: const BoxDecoration(
                     borderRadius:
@@ -27,18 +27,16 @@ class Login extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      // ignore: prefer_const_constructors
+                    children: const [
                       Text(
                         'Portal Do Aluno',
-                        style: const TextStyle(
+                        style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
-                      const Icon(
+                      Icon(
                         Icons.school_outlined,
                         size: 100,
                         color: Colors.white,

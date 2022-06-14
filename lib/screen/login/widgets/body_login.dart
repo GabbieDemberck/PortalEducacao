@@ -17,7 +17,7 @@ class _BodyLoginState extends State<BodyLogin> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 40 / 100,
+      height: MediaQuery.of(context).size.height * 55 / 100,
       color: Colors.white,
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         const Padding(

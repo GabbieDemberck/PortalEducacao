@@ -1,6 +1,5 @@
 import 'package:educacao_portal/screen/disciplinas/widgets/disciplinas_card.dart';
 import 'package:educacao_portal/screen/home/home_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DisciplinasLista extends StatelessWidget {
@@ -24,10 +23,8 @@ class DisciplinasLista extends StatelessWidget {
               MaterialPageRoute(builder: (context) => const HomePage())),
         ),
       ),
-      body: SingleChildScrollView(
-        child: SizedBox(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
+      body: Column(children: [
+        Expanded(
           child: ListView(
             children: [
               DisciplinasCard(
@@ -81,7 +78,7 @@ class DisciplinasLista extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      ]),
     );
   }
 }
