@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
+import 'package:educacao_portal/screen/home/widgets/atalhos_aluno.dart';
 import 'package:flutter/material.dart';
-
-import 'atalhos_aluno.dart';
 import 'foto_usuario.dart';
+import 'dart:math' as math;
 
 class CabecalhoAluno extends StatelessWidget {
   final String aluno = 'Gabrielle Cristina Soares Demberck';
@@ -45,22 +44,65 @@ class CabecalhoAluno extends StatelessWidget {
               ),
             ],
           ),
-          if (sizeWidth > 380)
-            Container(
-              padding: const EdgeInsets.only(left: 25, top: 10),
-              alignment: Alignment.centerLeft,
-              child: const Text(
-                ' Atalhos',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.left,
-              ),
-            ),
-          const AtalhosAluno()
+          Atalhos(),
         ],
       ),
     );
+  }
+}
+
+class Atalhos extends StatefulWidget {
+  const Atalhos({Key? key}) : super(key: key);
+
+  @override
+  _AtalhosState createState() => _AtalhosState();
+}
+
+class _AtalhosState extends State<Atalhos> {
+  var isVisible = false;
+  double rotation = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: Column(
+      children: [
+        TextButton(
+            onPressed: () {
+              setState(() {
+                isVisible = !isVisible;
+                if (isVisible) {
+                  rotation = 90 * math.pi / 180;
+                } else {
+                  rotation = 0;
+                }
+              });
+            },
+            child: Row(
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(left: 25.0),
+                  child: Text(
+                    'Atalhos',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Transform.rotate(
+                  angle: rotation,
+                  child: const IconButton(
+                    icon: Icon(
+                      Icons.chevron_right_sharp,
+                      color: Colors.white,
+                    ),
+                    onPressed: null,
+                  ),
+                ),
+              ],
+            )),
+        Visibility(visible: isVisible, child: AtalhosAluno()),
+      ],
+    ));
   }
 }

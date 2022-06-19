@@ -1,5 +1,4 @@
 import 'package:educacao_portal/screen/disciplinas/disciplinas_lista.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/unidade_lista.dart';
@@ -18,7 +17,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-        color: Colors.deepPurple,
+        color: Colors.indigo,
         shape: const CircularNotchedRectangle(),
         // ignore: prefer_const_literals_to_create_immutables
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [

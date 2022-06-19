@@ -1,10 +1,7 @@
 import 'package:educacao_portal/screen/home/widgets/bottom_navigation.dart';
+import 'package:educacao_portal/screen/home/widgets/cabecalho_aluno.dart';
 import 'package:educacao_portal/screen/home/widgets/horario_aula.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-
-import 'widgets/cabecalho_aluno.dart';
 import 'widgets/menu_atividades.dart';
 
 // ignore: must_be_immutable, camel_case_types
@@ -15,7 +12,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.purple.shade900,
+        backgroundColor: Colors.indigo,
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
@@ -53,15 +50,15 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    color: Colors.purple.shade900,
-                    borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(40),
-                      bottomRight: Radius.circular(40),
-                    )),
-                height: MediaQuery.of(context).size.height * 25 / 100,
-                child: const CabecalhoAluno()),
+              alignment: Alignment.topCenter,
+              decoration: const BoxDecoration(
+                  color: Colors.indigo,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(40),
+                    bottomRight: Radius.circular(40),
+                  )),
+              child: const Expanded(child: CabecalhoAluno()),
+            ),
             const HorarioAula(),
             const MenuAtividades(),
           ],
