@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/body_login.dart';
+import 'widgets/bottom_login.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    double screenWidthSize = MediaQuery.of(context).size.width;
+    double screenHeightSize = MediaQuery.of(context).size.height;
     return Scaffold(
         backgroundColor: Colors.indigo,
         body: SingleChildScrollView(
@@ -16,43 +18,47 @@ class Login extends StatelessWidget {
                 decoration: const BoxDecoration(
                   color: Colors.white,
                 ),
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 40 / 100,
+                width: screenWidthSize,
+                height: screenHeightSize * 45 / 100,
                 child: Container(
                   decoration: const BoxDecoration(
                     borderRadius:
-                        BorderRadius.only(bottomRight: Radius.circular(110)),
+                        BorderRadius.only(bottomRight: Radius.circular(120)),
                     color: Colors.indigo,
                   ),
-                  width: MediaQuery.of(context).size.width,
+                  width: screenWidthSize,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        'Portal Do Aluno',
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                        textAlign: TextAlign.center,
+                    children: [
+                      Image(
+                        image: const AssetImage('iconsBase/diploma.png'),
+                        width: screenHeightSize * 30 / 100,
+                        height: screenHeightSize * 30 / 100,
                       ),
-                      Icon(
-                        Icons.school_outlined,
-                        size: 100,
-                        color: Colors.white,
+                      const Padding(
+                        padding: EdgeInsets.only(top: 8.0),
+                        child: Text(
+                          'Portal Do Aluno',
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ],
                   ),
                 ),
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 10 / 100,
+                height: screenHeightSize * 15 / 100,
                 decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius:
                         BorderRadius.only(topLeft: Radius.circular(120))),
               ),
-              const BodyLogin()
+              const BottomLogin()
             ],
           ),
         ));

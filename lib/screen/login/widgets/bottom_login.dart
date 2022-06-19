@@ -1,11 +1,11 @@
 import 'package:educacao_portal/screen/home/home_page.dart';
 import 'package:flutter/material.dart';
 
-class BodyLogin extends StatefulWidget {
-  const BodyLogin({Key? key}) : super(key: key);
+class BottomLogin extends StatefulWidget {
+  const BottomLogin({Key? key}) : super(key: key);
 
   @override
-  State<BodyLogin> createState() => _BodyLoginState();
+  State<BottomLogin> createState() => _BottomLoginState();
 }
 
 final ButtonStyle style = ElevatedButton.styleFrom(
@@ -13,15 +13,15 @@ final ButtonStyle style = ElevatedButton.styleFrom(
   fontSize: 14,
 ));
 
-class _BodyLoginState extends State<BodyLogin> {
+class _BottomLoginState extends State<BottomLogin> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 55 / 100,
+      height: MediaQuery.of(context).size.height * 40 / 100,
       color: Colors.white,
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         const Padding(
-          padding: EdgeInsets.fromLTRB(50, 2, 50, 0),
+          padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
           child: TextField(
             obscureText: false,
             decoration: InputDecoration(
