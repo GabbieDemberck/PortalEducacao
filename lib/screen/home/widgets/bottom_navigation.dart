@@ -1,8 +1,8 @@
 import 'package:educacao_portal/screen/disciplinas/disciplinas_lista.dart';
 import 'package:flutter/material.dart';
 
+import '../../usuario_perfil/usuario_perfil.dart';
 import '../../widgets/unidade_lista.dart';
-import 'perfil_usuario.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -23,10 +23,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           IconButton(
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const PerfilUsuario()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => UsuarioPerfil()));
             },
             icon: Icon(
               Icons.person_rounded,

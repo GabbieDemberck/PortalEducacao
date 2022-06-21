@@ -1,6 +1,6 @@
 import 'package:educacao_portal/screen/home/widgets/atalhos_aluno.dart';
 import 'package:flutter/material.dart';
-import 'foto_usuario.dart';
+import '../../widgets/foto_usuario.dart';
 import 'dart:math' as math;
 
 class CabecalhoAluno extends StatelessWidget {
