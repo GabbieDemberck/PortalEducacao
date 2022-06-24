@@ -2,6 +2,7 @@ import 'package:educacao_portal/screen/home/widgets/bottom_navigation.dart';
 import 'package:educacao_portal/screen/home/widgets/cabecalho_aluno.dart';
 import 'package:educacao_portal/screen/home/widgets/horario_aula.dart';
 import 'package:flutter/material.dart';
+import '../notificacoes/notificacao_page.dart';
 import 'widgets/menu_atividades.dart';
 
 // ignore: must_be_immutable, camel_case_types
@@ -20,7 +21,12 @@ class HomePage extends StatelessWidget {
                 Icons.notifications,
                 size: 18,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const NotificacaoPage()));
+              },
             );
           },
         ),

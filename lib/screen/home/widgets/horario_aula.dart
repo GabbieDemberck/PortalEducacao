@@ -1,7 +1,5 @@
 import 'package:educacao_portal/screen/widgets/aluno_quadro_de_aulas.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class HorarioAula extends StatelessWidget {
   const HorarioAula({Key? key}) : super(key: key);
