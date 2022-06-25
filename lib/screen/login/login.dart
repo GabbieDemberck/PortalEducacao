@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'widgets/bottom_login.dart';
+import 'widgets/usuario_tipo_button.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -38,7 +39,7 @@ class Login extends StatelessWidget {
                       const Padding(
                         padding: EdgeInsets.only(top: 8.0),
                         child: Text(
-                          'Portal Do Aluno',
+                          'Portal Educação',
                           style: TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
@@ -52,11 +53,14 @@ class Login extends StatelessWidget {
                 ),
               ),
               Container(
-                height: screenHeightSize * 15 / 100,
+                alignment: Alignment.center,
+                width: screenWidthSize,
+                height: screenHeightSize * 16 / 100,
                 decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius:
-                        BorderRadius.only(topLeft: Radius.circular(120))),
+                        BorderRadius.only(topLeft: Radius.circular(100))),
+                child: const UsuarioTipoButton(),
               ),
               const BottomLogin()
             ],
