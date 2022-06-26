@@ -30,7 +30,7 @@ class _UsuarioTipoButtonState extends State<UsuarioTipoButton> {
                 children: const [
                   Image(
                     image: AssetImage(
-                      'iconsBase/icons8-empresaria-100.png',
+                      'assets/iconsBase/icons8-homem-estudante-100.png',
                     ),
                     width: 20,
                     height: 20,
@@ -47,7 +47,7 @@ class _UsuarioTipoButtonState extends State<UsuarioTipoButton> {
                   Text('Professor'),
                   Image(
                     image: AssetImage(
-                      'iconsBase/icons8-homem-estudante-100.png',
+                      'assets/iconsBase/icons8-empresaria-100.png',
                     ),
                     width: 20,
                     height: 20,

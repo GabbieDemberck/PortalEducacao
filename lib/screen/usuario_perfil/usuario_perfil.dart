@@ -8,7 +8,7 @@ class UsuarioPerfil extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Editar Perfil'),
+        title: const Text('Meu Perfil'),
         backgroundColor: Colors.indigo,
       ),
       body: Center(
@@ -54,10 +54,18 @@ class UsuarioTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 15.0, right: 15.0),
       child: TextField(
-        obscureText: obscureText,
+        obscureText: false,
         decoration: InputDecoration(
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.indigo, width: 1.0),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.white, width: 1.0),
+          ),
+          focusColor: Colors.indigo,
           hintStyle: TextStyle(color: Colors.white),
           hintText: placeHolder,
+          fillColor: Colors.white,
         ),
       ),
     );

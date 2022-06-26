@@ -20,11 +20,12 @@ class Login extends StatelessWidget {
                   color: Colors.white,
                 ),
                 width: screenWidthSize,
-                height: screenHeightSize * 45 / 100,
+                height: screenHeightSize * 50 / 100,
                 child: Container(
-                  decoration: const BoxDecoration(
-                    borderRadius:
-                        BorderRadius.only(bottomRight: Radius.circular(120)),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(120),
+                    ),
                     color: Colors.indigo,
                   ),
                   width: screenWidthSize,
@@ -32,7 +33,7 @@ class Login extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image(
-                        image: const AssetImage('iconsBase/diploma.png'),
+                        image: const AssetImage('assets/iconsBase/diploma.png'),
                         width: screenHeightSize * 30 / 100,
                         height: screenHeightSize * 30 / 100,
                       ),
@@ -54,12 +55,13 @@ class Login extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.center,
-                width: screenWidthSize,
-                height: screenHeightSize * 16 / 100,
+                height: screenHeightSize * 10 / 100,
                 decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius:
-                        BorderRadius.only(topLeft: Radius.circular(100))),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(150),
+                  ),
+                  color: Colors.white,
+                ),
                 child: const UsuarioTipoButton(),
               ),
               const BottomLogin()

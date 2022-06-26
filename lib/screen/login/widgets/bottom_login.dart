@@ -26,7 +26,9 @@ class _BottomLoginState extends State<BottomLogin> {
             obscureText: false,
             decoration: InputDecoration(
               border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(50)),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(50),
+                  ),
                   borderSide: BorderSide(color: Colors.black, width: 1.0)),
               labelText: 'Login',
               hintText: 'Seu login: CPF',
