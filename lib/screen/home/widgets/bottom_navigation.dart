@@ -1,6 +1,7 @@
 import 'package:educacao_portal/screen/disciplinas/disciplinas_lista.dart';
 import 'package:flutter/material.dart';
 
+import '../../diario/diario_de_classe.dart';
 import '../../usuario_perfil/usuario_perfil.dart';
 import '../../widgets/unidade_lista.dart';
 
@@ -59,9 +60,12 @@ class _BottomNavigationState extends State<BottomNavigation> {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DiarioDeClasse()));
+            },
             icon: Icon(
-              Icons.align_vertical_bottom,
+              Icons.book_rounded,
               color: colorIcon,
             ),
           )
